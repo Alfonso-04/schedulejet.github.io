@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/file.js">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container vh-50">
+
+            <!--Barra de navegacion-->
+            <nav class="row text-white justify-content-between align-items-center text-uppercase pt-4">
+
+                <!--Logo-->
+                <a href="#" class="col-auto text-reset text-decoration-none">
+                    <img src="../img/logo.png" alt="Logo AddEvent" class="img-logo " />
+                    SCHEDULEJET
+
+                </a>
+                <div class="col-auto">
+
+                    <a href="../index.html" class="text-reset text-decoration-none mx-1">Cerrar Sesión</a>
+                    
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!------------------------------------------------------------------------------------>
+
+
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>¿Qué deseas realizar hoy?</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6">
+                                <label>Ver asignaturas matriculadas</label><br> <span class="btn btn-primary mt-4 ms-5"
+                                    onclick="divVerMaterias()">Ver</span>
+                            </div>
+                            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6">
+                                <label>Realizar matricula de asignaturas</label><br> <span class="btn btn-primary mt-4 ms-5"
+                                    onclick="divEscogeMateria()">Realizar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!------------------------------------------------------------------------------------>
+
+
+            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6">
+                <div class="card" id="divMaterias" style="display: none;">
+                    <div class="card-header">
+                        <h4>Escoge las materias</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="form">
+                            <label>Materia</label>
+                            <select class="form-control" id="txtmateria" required>
+                                <option value="">Seleccione</option>
+                                <option value="1" data-name="Fundamentos de programación">Fundamentos de programación
+                                </option>
+                                <option value="2" data-name="Fisica mecanica">Fisica mecanica</option>
+                                <option value="3" data-name="Introducción a la ingeniería">Introducción a la ingeniería
+                                </option>
+                                <option value="4" data-name="Fundamentos de matematicos">Fundamentos de matematicos
+                                </option>
+                                <option value="5" data-name="Sociedad y tecnología">Sociedad y tecnología</option>
+                                <option value="6" data-name="Comunicación oral y escrita">Comunicación oral y escrita
+                                </option>
+                                <option value="7" data-name="Formación de espíritu científico">Formación de espíritu
+                                    científico</option>
+
+                            </select>
+                            <label>Numero de creditos</label>
+                            <input type="text" class="form-control" id=txtnumcredit disabled required>
+                            <label>Docente</label>
+                            <input type="text" class="form-control" id=txthoras disabled required>
+                            <br>
+                            <button type="submit" id="btnagregar" class="btn btn-primary"
+                                onclick="agregarMateria()">Agregar </button>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <div id="tabladivVerMatricula" style="display: none">
+                <br><br>
+
+                <table class="table table-hover" id="tablaVerMatricula">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Materia</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+
+            <!------------------------------------------------------------>
+            <div id="tabladivMaricular" style="display: none">
+                <br><br>
+
+                <table class="table table-hover" id="tablaMatricular">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Materia</th>
+                            <th class="text-center">Opcion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <button class="btn btn-warning" onclick="sendMaterias()">Enviar</button>
+            </div>
+        </div>
+            
+
+    </div>
+    
+
+
+
+
+
+
+    <!---------------------------------------------------------------------------------------------------------------------->
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="bg-warning text-center p-3 ">
+        <p>&copy;
+            Todos los derechos reservados :: Barranquilla, Colombia 2021
+        </p>
+        
+
+    </div>
+    <script src="../js/file.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,50 @@
+/*--------------------------Index.html----------------------------------*/
+
+.header{
+    background-size: cover;
+    background-color: #76BCBA;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+.img-logo{
+    width: 40px;
+}
+.header::after{
+    
+    content: "";
+    
+    width: 100%;
+    height: 0px;
+    background: inherit;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    filter: blur(1px);
+    
+    
+
+}
+.vh-50{
+    height: 20vmin;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.card-img-filter{
+    filter: brightness(0.5);
+
+}
+
+
+/*--------------------------Salon.html----------------------------------*/
+
+.media-object-img{
+   --tamano: 70px;
+   width: var(--tamano);
+   height: var(--tamano);
+   margin-right: 15px;
+}

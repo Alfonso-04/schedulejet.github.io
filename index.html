@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../js/file.js">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body >
+    <div class="header">
+        <div class="container vh-50">
+
+            <!--Barra de navegacion-->
+            <nav class="row text-white justify-content-between align-items-center text-uppercase pt-4">
+
+                <!--Logo-->
+                <a href="#" class="col-auto text-reset text-decoration-none">
+                    <img src="./img/logo.png" alt="Logo AddEvent" class="img-logo " />
+                    SCHEDULEJET
+
+                </a>
+                <div class="col-auto">
+
+                    
+                    <a href="index.html" class="text-reset text-decoration-none mx-2">Iniciar sesión</a>
+                    
+
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div class="row" id="divLogIn" style="display: '';">
+            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6 ">
+                <div class="container w-100 d-flex justify-content-center align-items-center ">
+                    <div class="text-white ">
+                        <h2>Bienvenido a ScheduleJet</h2>
+                        <p>Por favor inicie sesión</p>
+                        <p class="mt-5">¿Aún no tienes cuenta? <a href="#" class="text-decoration-none text-warning btn"
+                                onclick="showRegistrarse()">REGISTRATE</a> </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4  col-md-4  col-sm-4 col-4 ">
+                <div class="container">
+                    <form>
+                        <div class="form-group text-white">
+                            <h3 class="text-center">Iniciar Sesión</h3>
+
+                            <div class="mb-1">
+                                <label class="form-label">Correo electronico</label>
+                                <input type="email" placeholder="Email" class="form-control" id="txtemail">
+                            </div>
+                            <div class="mb-1">
+                                <label class="form-label">Contraseña</label>
+                                <input type="password" placeholder="Contraseña" class="form-control" id="txtpassword">
+                            </div>
+                            <div class="d-grid">
+                                <input type="button" value="Log In" onclick="signIn()" class="btn btn-warning mt-2">
+                            </div>
+
+                        </div>
+
+
+                        <div class="container  my-1"></div>
+                        <div class="row">
+                            <div class="col ">
+                                <img src="./icons/facebook.png" width="20px">
+                            </div>
+                            <div class="col">
+                                <img src="./icons/search.png" width="20px">
+                            </div>
+                            <div class="col">
+                                <img src="./icons/twitter.png" width="20px">
+                            </div>
+                        </div>
+                        <div class="my-1">
+                            <span class="text-white">¡Empieza matricular tus asignaturas!</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="divSignUp" style="display: none;">
+            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6 ">
+                <div class="container w-100 d-flex justify-content-center align-items-center ">
+                    <div class="text-white ">
+                        <h2>Bienvenido ScheduleJet</h2>
+                        <p>Por favor Registrate</p>
+                        <p class="mt-5">¿Ya tienes cuenta? <a href="#" class="text-decoration-none text-warning btn"
+                                onclick="showLogin()">INICIA SESION</a> </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4  col-md-4  col-sm-4 col-4 ">
+                <div class="container">
+                    <form>
+                        <div class="form-group text-white">
+                            <h3 class="text-center">Registrate</h3>
+
+                            <div class="mb-1"> 
+                                <label class="form-label">Correo electronico</label>
+                                <input type="text" placeholder="Nombre completo" class="form-control" id="txtemailreg" required>
+                            </div>
+                            <div class="mb-1">
+                                <label class="form-label">Contraseña</label>
+                                <input type="password" placeholder="Contraseña" class="form-control" id="txtpasswordreg"required>
+                            </div>
+                            <div class="mb-1">
+                                <label class="form-label">Nombre completo</label>
+                                <input type="text" placeholder="Nombre completo" class="form-control" id="txtnombre"required>
+                            </div>
+                            <div class="mb-1">
+                                <label class="form-label">Documento de identidad</label>
+                                <input type="txt" placeholder="Numero de documento" maxlength="10" class="form-control"id="txtdocid"required>
+                            </div>
+                            <label>Programa de estudio</label>
+                            <select class="form-control" id="txtprogram" required>
+                                <option selected>Seleccione</option>
+                                <option value="1" data-name="Ingeniería de Sistemas">Ingeniería de sistemas</option>
+                                <option value="2" data-name="Ingeniería Industrial">Ingeniería industrial</option>
+                            </select>
+                            <label>Semestre</label>
+                            <select class="form-control" id="i" required>
+                                <option selected>Seleccione</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <div class="d-grid">
+                                <input type="submit" value="Registrarse" onclick="signUp()"
+                                    class="btn btn-warning mt-2">
+                            </div>
+
+                        </div>
+
+
+                        <div class="container  my-1"></div>
+                        <div class="row">
+                            <div class="col ">
+                                <img src="./icons/facebook.png" width="20px">
+                            </div>
+                            <div class="col">
+                                <img src="./icons/search.png" width="20px">
+                            </div>
+                            <div class="col">
+                                <img src="./icons/twitter.png" width="20px">
+                            </div>
+                        </div>
+                        <div class="my-1">
+                            <span class="text-white">¡Empieza a matricular tus asignaturas!</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+    </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------------------------->
+
+    <div class="bg-warning text-center p-3">
+        <p>&copy;
+            Todos los derechos reservados :: Barranquilla, Colombia 2021
+        </p>
+
+
+    </div>
+
+ 
+    <script src="./js/file.js"></script>
+
+</html>
